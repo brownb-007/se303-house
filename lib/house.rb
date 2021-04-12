@@ -28,4 +28,7 @@ class House
     end
   end
 
+  def recite
+    (1..12).collect {|i| line(i)}.join("\n")
+  end
 end
