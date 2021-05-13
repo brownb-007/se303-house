@@ -10,7 +10,7 @@ class House
   def line(line)
     case line
     when 1
-      "This is the house that Jack built.\n"
+      "This is #{segment(1)}the house that Jack built.\n"
     when 2
       "This is #{segment(2)}the house that Jack built.\n"
     when 3
@@ -37,6 +37,11 @@ class House
   end
 
   def segment(number)
-    "the malt that lay in "
+    case number
+    when 1
+      ""
+    else
+      "the malt that lay in "
+    end
   end
 end
