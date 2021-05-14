@@ -41,6 +41,8 @@ class House
       "the rat that ate the malt that lay in "
     when 4
       "the cat that killed the rat that ate the malt that lay in "
+    when 5
+      "the dog that worried the cat that killed the rat that ate the malt that lay in "
     end
   end
 end
