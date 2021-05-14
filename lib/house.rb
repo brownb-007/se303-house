@@ -8,7 +8,7 @@ class House
   end
 
   def line(line_num)
-      "This is #{segment(line_num)}the house that Jack built.\n"
+    "This is #{segment(line_num)}the house that Jack built.\n"
   end
 
   def segment(line_num)
