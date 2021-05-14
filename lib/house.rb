@@ -10,7 +10,7 @@ class House
   def line(line_num)
     case line_num
     when 3
-      "This is the rat that ate the malt that lay in the house that Jack built.\n"
+      "This is #{segment(line_num)}the house that Jack built.\n"
     when 4
       "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     when 5
