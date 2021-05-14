@@ -11,8 +11,6 @@ class House
       "This is #{segment(line_num)}the house that Jack built.\n"
   end
 
-  end
-
   def segment(line_num)
     case line_num
     when 1
