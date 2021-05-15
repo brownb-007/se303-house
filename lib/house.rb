@@ -8,13 +8,13 @@ class House
   end
 
   def line(line_num)
-    "This is #{segment(line_num)}the house that Jack built.\n"
+    "This is #{segment(line_num)}"
   end
 
   def segment(line_num)
     case line_num
     when 1
-      ""
+      "the house that Jack built.\n"
     when 2
       "the malt that lay in "
     when 3
