@@ -18,7 +18,7 @@ class House
     when 2
       "the malt that lay in #{segment(line_num-1)}"
     when 3
-      "the rat that ate the malt that lay in "
+      "the rat that ate #{segment(line_num-1)}"
     when 4
       "the cat that killed the rat that ate the malt that lay in "
     when 5
