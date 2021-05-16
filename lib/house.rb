@@ -36,7 +36,7 @@ class House
     when 10
       "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 11
-      "the farmer sowing his corn that kept #{segment(line_num-1)}"
+      "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 12
       "the horse and the hound and the horn that belonged to #{segment(line_num-1)}"
     else
@@ -55,7 +55,8 @@ class House
       "the maiden all forlorn that milked ",
       "the man all tattered and torn that kissed ",
       "the priest all shaven and shorn that married ",
-      "the rooster that crowed in the morn that woke "
+      "the rooster that crowed in the morn that woke ",
+      "the farmer sowing his corn that kept "
     ]
   end
 end
