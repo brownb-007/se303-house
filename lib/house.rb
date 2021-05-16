@@ -52,6 +52,7 @@ class House
       "the cat that killed ",
       "the dog that worried ",
       "the cow with the crumpled horn that tossed "
+      "the maiden all forlorn that milked "
     ]
   end
 end
