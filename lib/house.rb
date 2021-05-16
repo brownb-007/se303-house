@@ -14,7 +14,7 @@ class House
   def segment(line_num)
     case line_num
     when 1
-      "the house that Jack built.\n"
+      "#{verses[line_num-1]}"
     when 2
       "the malt that lay in #{segment(line_num-1)}"
     when 3
@@ -42,7 +42,7 @@ class House
 
   def verses
     [
-      ""
+      "the house that Jack built.\n",
     ]
   end
 end
