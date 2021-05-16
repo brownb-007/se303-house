@@ -26,7 +26,7 @@ class House
     when 5
       "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 6
-      "the cow with the crumpled horn that tossed #{segment(line_num-1)}"
+      "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 7
       "the maiden all forlorn that milked #{segment(line_num-1)}"
     when 8
@@ -50,7 +50,8 @@ class House
       "the malt that lay in ",
       "the rat that ate ",
       "the cat that killed ",
-      "the dog that worried "
+      "the dog that worried ",
+      "the cow with the crumpled horn that tossed "
     ]
   end
 end
