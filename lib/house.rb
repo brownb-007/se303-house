@@ -34,7 +34,7 @@ class House
     when 9
       "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 10
-      "the rooster that crowed in the morn that woke #{segment(line_num-1)}"
+      "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 11
       "the farmer sowing his corn that kept #{segment(line_num-1)}"
     when 12
@@ -54,7 +54,8 @@ class House
       "the cow with the crumpled horn that tossed ",
       "the maiden all forlorn that milked ",
       "the man all tattered and torn that kissed ",
-      "the priest all shaven and shorn that married "
+      "the priest all shaven and shorn that married ",
+      "the rooster that crowed in the morn that woke "
     ]
   end
 end
