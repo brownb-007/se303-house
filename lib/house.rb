@@ -8,7 +8,7 @@ class House
   end
 
   def line(line_num)
-    "This is #{segment(line_num)}"
+    "This is #{segment(line_num)}the house that Jack built.\n"
   end
 
   def segment(line_num)
@@ -16,7 +16,7 @@ class House
     when 1
       "#{verses[line_num-1]}"
     when 2
-      "the malt that lay in #{segment(line_num-1)}"
+      "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 3
       "the rat that ate #{segment(line_num-1)}"
     when 4
@@ -37,12 +37,15 @@ class House
       "the farmer sowing his corn that kept #{segment(line_num-1)}"
     when 12
       "the horse and the hound and the horn that belonged to #{segment(line_num-1)}"
+    else
+      "This is #{segment(line_num)}the house that Jack built.\n"
     end
   end
 
   def verses
     [
-      "the house that Jack built.\n",
+      "",
+      "the malt that lay in "
     ]
   end
 end
