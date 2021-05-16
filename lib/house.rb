@@ -8,45 +8,16 @@ class House
   end
 
   def line(line_num)
-    "This is #{segment(line_num)}the house that Jack built.\n"
+    "This is #{segment(line_num)}"
   end
 
   def segment(line_num)
-    case line_num
-    when 0
-      ""
-    when 1
-      "#{verses[line_num-1]}"
-    when 2
-      "#{verses[line_num-1]}#{segment(line_num-1)}"
-    when 3
-      "#{verses[line_num-1]}#{segment(line_num-1)}"
-    when 4
-      "#{verses[line_num-1]}#{segment(line_num-1)}"
-    when 5
-      "#{verses[line_num-1]}#{segment(line_num-1)}"
-    when 6
-      "#{verses[line_num-1]}#{segment(line_num-1)}"
-    when 7
-      "#{verses[line_num-1]}#{segment(line_num-1)}"
-    when 8
-      "#{verses[line_num-1]}#{segment(line_num-1)}"
-    when 9
-      "#{verses[line_num-1]}#{segment(line_num-1)}"
-    when 10
-      "#{verses[line_num-1]}#{segment(line_num-1)}"
-    when 11
-      "#{verses[line_num-1]}#{segment(line_num-1)}"
-    when 12
-      "#{verses[line_num-1]}#{segment(line_num-1)}"
-    else
-      "This is #{segment(line_num)}the house that Jack built.\n"
-    end
+    "#{verses[line_num-1]}#{segment(line_num-1)}"
   end
 
   def verses
     [
-      "",
+      "the house that Jack built.",
       "the malt that lay in ",
       "the rat that ate ",
       "the cat that killed ",
