@@ -32,7 +32,7 @@ class House
     when 9
       "the priest all shaven and shorn that married #{segment(line_num-1)}"
     when 10
-      "the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in "
+      "the rooster that crowed in the morn that woke #{segment(line_num-1)}"
     when 11
       "the farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in "
     when 12
