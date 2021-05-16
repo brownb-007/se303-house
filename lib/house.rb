@@ -18,7 +18,7 @@ class House
     when 2
       "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 3
-      "the rat that ate #{segment(line_num-1)}"
+      "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 4
       "the cat that killed #{segment(line_num-1)}"
     when 5
@@ -45,7 +45,8 @@ class House
   def verses
     [
       "",
-      "the malt that lay in "
+      "the malt that lay in ",
+      "the rat that ate "
     ]
   end
 end
