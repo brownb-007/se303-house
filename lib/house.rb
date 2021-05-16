@@ -12,12 +12,16 @@ class House
   end
 
   def segment(line_num)
-    "#{verses[line_num-1]}#{segment(line_num-1)}"
+    if line_num == 0
+      ""
+    else
+      "#{verses[line_num-1]}#{segment(line_num-1)}"
+    end
   end
 
   def verses
     [
-      "the house that Jack built.",
+      "the house that Jack built.\n",
       "the malt that lay in ",
       "the rat that ate ",
       "the cat that killed ",
