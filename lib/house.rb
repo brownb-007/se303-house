@@ -11,7 +11,6 @@ class House
     "This is #{verses.last(line_num).join(" ")}"
   end
 
-
   def verses
     [
       "the house that Jack built.\n",
