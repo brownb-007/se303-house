@@ -28,9 +28,9 @@ class House
     when 6
       "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 7
-      "the maiden all forlorn that milked #{segment(line_num-1)}"
+      "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 8
-      "the man all tattered and torn that kissed #{segment(line_num-1)}"
+      "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 9
       "the priest all shaven and shorn that married #{segment(line_num-1)}"
     when 10
@@ -51,8 +51,9 @@ class House
       "the rat that ate ",
       "the cat that killed ",
       "the dog that worried ",
-      "the cow with the crumpled horn that tossed "
-      "the maiden all forlorn that milked "
+      "the cow with the crumpled horn that tossed ",
+      "the maiden all forlorn that milked ",
+      "the man all tattered and torn that kissed "
     ]
   end
 end
