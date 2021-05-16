@@ -8,7 +8,7 @@ class House
   end
 
   def line(line_num)
-    "This is #{segment(line_num)}"
+    "This is #{verses.last(line_num).join("")}"
   end
 
   def segment(line_num)
@@ -33,6 +33,6 @@ class House
       "the rooster that crowed in the morn that woke ",
       "the farmer sowing his corn that kept ",
       "the horse and the hound and the horn that belonged to "
-    ]
+    ].reverse
   end
 end
