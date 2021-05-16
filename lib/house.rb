@@ -13,6 +13,8 @@ class House
 
   def segment(line_num)
     case line_num
+    when 0
+      ""
     when 1
       "#{verses[line_num-1]}"
     when 2
@@ -22,7 +24,7 @@ class House
     when 4
       "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 5
-      "the dog that worried #{segment(line_num-1)}"
+      "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 6
       "the cow with the crumpled horn that tossed #{segment(line_num-1)}"
     when 7
@@ -47,7 +49,8 @@ class House
       "",
       "the malt that lay in ",
       "the rat that ate ",
-      "the cat that killed "
+      "the cat that killed ",
+      "the dog that worried "
     ]
   end
 end
