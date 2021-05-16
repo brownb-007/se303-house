@@ -20,7 +20,7 @@ class House
     when 3
       "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 4
-      "the cat that killed #{segment(line_num-1)}"
+      "#{verses[line_num-1]}#{segment(line_num-1)}"
     when 5
       "the dog that worried #{segment(line_num-1)}"
     when 6
@@ -46,7 +46,8 @@ class House
     [
       "",
       "the malt that lay in ",
-      "the rat that ate "
+      "the rat that ate ",
+      "the cat that killed "
     ]
   end
 end
