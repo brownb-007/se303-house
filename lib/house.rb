@@ -35,4 +35,7 @@ class House
       "the horse and the hound and the horn that belonged to"
     ].reverse
   end
+
+  def PirateHouse < House
+  end
 end
