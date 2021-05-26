@@ -1,9 +1,4 @@
 class House
-  attr_reader :intro
-
-  def initialize(intro="This is ")
-    @intro = intro
-  end
 
   def recite
     (1..verses.length).collect {|i| line(i)}.join("\n")
