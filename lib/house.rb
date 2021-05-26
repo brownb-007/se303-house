@@ -4,14 +4,26 @@ class House
     (1..verses.length).collect {|i| line(i)}.join("\n")
   end
 
+  def recite_randomly
+    (1..verses.length).collect {|i| random_line(i)}.join("\n")
+  end
+
   def line(line_num)
-    "#{intro_to_verse} #{verses.last(line_num).join(" ")}"
+    "#{intro_to_verse} #{verses.reverse.last(line_num).join(" ")}"
+  end
+
+  def random_line
+    "#{intro_to_verse} #{randomize_line_order(line_num).join(" ")}"
   end
 
   private
 
   def intro_to_verse
     "This is"
+  end
+
+  def randomize_line_order(line_num)
+    (verses.shuffle[1..line_num] << verse[0])
   end
 
   def verses
@@ -28,7 +40,7 @@ class House
       "the rooster that crowed in the morn that woke",
       "the farmer sowing his corn that kept",
       "the horse and the hound and the horn that belonged to"
-    ].reverse
+    ]
   end
 end
 
