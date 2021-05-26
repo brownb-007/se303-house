@@ -9,12 +9,12 @@ class House
     (1..verses.length).collect {|i| line(i)}.join("\n")
   end
 
-  def intro_to_line
+  def intro_to_verse
     "This is"
   end
 
   def line(line_num)
-    "#{intro}#{verses.last(line_num).join(" ")}"
+    "#{intro_to_verse} #{verses.last(line_num).join(" ")}"
   end
 
   private
@@ -35,7 +35,10 @@ class House
       "the horse and the hound and the horn that belonged to"
     ].reverse
   end
+end
 
-  def PirateHouse < House
+class PirateHouse < House
+  def intro_to_verse
+    "Thar be"
   end
 end
