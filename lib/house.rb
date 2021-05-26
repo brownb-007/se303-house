@@ -1,6 +1,8 @@
 class House
+  attr_reader :intro
 
-  def initialize
+  def initialize(intro="This is ")
+    @intro = intro
   end
 
   def recite
@@ -8,7 +10,7 @@ class House
   end
 
   def line(line_num)
-    "This is #{verses.last(line_num).join(" ")}"
+    "#{intro}#{verses.last(line_num).join(" ")}"
   end
 
   private
