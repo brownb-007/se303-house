@@ -42,6 +42,23 @@ class House
       "the horse and the hound and the horn that belonged to"
     ]
   end
+
+  def subjects
+    [
+      "house",
+      "malt",
+      "rat",
+      "cat",
+      "dog",
+      "cow with the crumpled horn",
+      "maiden all forlorn",
+      "man all tattered and torn",
+      "priest all shaven and shorn",
+      "rooster that crowed in the morn",
+      "farmer sowing his corn",
+      "horse and the hound and the horn",
+    ]
+  end
 end
 
 class PirateHouse < House
