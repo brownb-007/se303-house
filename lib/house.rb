@@ -59,6 +59,24 @@ class House
       "horse and the hound and the horn",
     ]
   end
+
+  def verbs
+    [
+      "Jack built",
+      "lay in",
+      "ate",
+      "killed",
+      "worried",
+      "tossed",
+      "milked",
+      "kissed",
+      "married",
+      "woke",
+      "kept",
+      "belonged to",
+    ]
+  end
+
 end
 
 class PirateHouse < House
