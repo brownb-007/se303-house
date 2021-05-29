@@ -9,11 +9,11 @@ class House
   end
 
   def line(line_num)
-    "#{intro_to_verse} #{verses.reverse.last(line_num).join(" ")}"
+    "#{intro_to_verse} #{verses.reverse.last(line_num).join(" ")}.\n"
   end
 
   def random_line(line_num)
-    "#{intro_to_verse} #{randomize_line_order(line_num).join(" ")}"
+    "#{intro_to_verse} #{randomize_line_order(line_num).join(" ")}.\n"
   end
 
   private
@@ -27,20 +27,7 @@ class House
   end
 
   def verses
-    [
-      "the house that Jack built.\n",
-      "the malt that lay in",
-      "the rat that ate",
-      "the cat that killed",
-      "the dog that worried",
-      "the cow with the crumpled horn that tossed",
-      "the maiden all forlorn that milked",
-      "the man all tattered and torn that kissed",
-      "the priest all shaven and shorn that married",
-      "the rooster that crowed in the morn that woke",
-      "the farmer sowing his corn that kept",
-      "the horse and the hound and the horn that belonged to"
-    ]
+    12.times.map {|i| "the #{subjects[i]} that #{verbs[i]}"}
   end
 
   def subjects
