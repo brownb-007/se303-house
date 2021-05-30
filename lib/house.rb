@@ -8,7 +8,7 @@ class House
     (1..verses.length).collect {|i| random_line(i)}.join("\n")
   end
 
-  def recite_with_random_subjects
+  def recite_with_random_verses
     (1..verses.length).collect {|i| random_line_verses(i)}.join("\n")
   end
 
@@ -90,4 +90,7 @@ class PirateHouse < House
   end
 end
 
-puts House.new.recite_with_random_subjects
+
+puts House.new.recite_randomly
+puts "\n\n"
+puts House.new.recite_with_random_verses
