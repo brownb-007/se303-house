@@ -8,12 +8,20 @@ class House
     (1..verses.length).collect {|i| random_line(i)}.join("\n")
   end
 
+  def recite_with_random_subjects
+    (1..verses.length).collect {|i| random_line_verses(i)}.join("\n")
+  end
+
   def line(line_num)
     "#{intro_to_verse} #{verses.reverse.last(line_num).join(" ")}.\n"
   end
 
   def random_line(line_num)
     "#{intro_to_verse} #{randomize_line_order(line_num).join(" ")}.\n"
+  end
+
+  def random_line_verses(line_num)
+    "#{intro_to_verse} #{randomize_using_random_verses(line_num).join(" ")}.\n"
   end
 
   private
@@ -26,8 +34,16 @@ class House
     (verses[1..line_num].shuffle << verses[0])
   end
 
+  def randomize_using_random_verses(line_num)
+    (random_verses[1..line_num] << verses[0])
+  end
+
   def verses
     12.times.map {|i| "the #{subjects[i]} that #{verbs[i]}"}
+  end
+
+  def random_verses
+    12.times.map {|i| "the #{subjects.sample} that #{verbs.sample}"}
   end
 
   def subjects
@@ -73,3 +89,5 @@ class PirateHouse < House
     "Thar be"
   end
 end
+
+puts House.new.recite_with_random_subjects
