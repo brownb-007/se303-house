@@ -76,7 +76,7 @@ class RandomHouse < House
   def random_line_verses(line_num)
     "#{intro_to_verse} #{randomize_using_random_verses(line_num).join(' ')}.\n"
   end
-  
+
   private
   def randomize_line_order(line_num)
     (verses[1..line_num].shuffle << verses[0])
@@ -93,5 +93,5 @@ end
 
 
 puts RandomHouse.new.recite_randomly
-puts "\n\n"
+puts "\n\n\n\n"
 puts RandomHouse.new.recite_with_random_verses
