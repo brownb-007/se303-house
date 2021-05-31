@@ -3,24 +3,8 @@ class House
     (1..verses.length).collect { |i| line(i) }.join("\n")
   end
 
-  def recite_randomly
-    (1..verses.length).collect { |i| random_line(i) }.join("\n")
-  end
-
-  def recite_with_random_verses
-    (1..verses.length).collect { |i| random_line_verses(i) }.join("\n")
-  end
-
   def line(line_num)
     "#{intro_to_verse} #{verses.reverse.last(line_num).join(' ')}.\n"
-  end
-
-  def random_line(line_num)
-    "#{intro_to_verse} #{randomize_line_order(line_num).join(' ')}.\n"
-  end
-
-  def random_line_verses(line_num)
-    "#{intro_to_verse} #{randomize_using_random_verses(line_num).join(' ')}.\n"
   end
 
   private
@@ -29,20 +13,8 @@ class House
     'This is'
   end
 
-  def randomize_line_order(line_num)
-    (verses[1..line_num].shuffle << verses[0])
-  end
-
-  def randomize_using_random_verses(line_num)
-    (random_verses[1..line_num] << verses[0])
-  end
-
   def verses
     12.times.map { |i| "the #{subjects[i]} that #{verbs[i]}" }
-  end
-
-  def random_verses
-    12.times.map { |_i| "the #{subjects.sample} that #{verbs.sample}" }
   end
 
   def subjects
@@ -88,6 +60,38 @@ class PirateHouse < House
   end
 end
 
-puts House.new.recite_randomly
+class RandomHouse < House
+  def recite_randomly
+    (1..verses.length).collect { |i| random_line(i) }.join("\n")
+  end
+
+  def recite_with_random_verses
+    (1..verses.length).collect { |i| random_line_verses(i) }.join("\n")
+  end
+
+  def random_line(line_num)
+    "#{intro_to_verse} #{randomize_line_order(line_num).join(' ')}.\n"
+  end
+
+  def random_line_verses(line_num)
+    "#{intro_to_verse} #{randomize_using_random_verses(line_num).join(' ')}.\n"
+  end
+  
+  private
+  def randomize_line_order(line_num)
+    (verses[1..line_num].shuffle << verses[0])
+  end
+
+  def randomize_using_random_verses(line_num)
+    (random_verses[1..line_num] << verses[0])
+  end
+
+  def random_verses
+    12.times.map { |_i| "the #{subjects.sample} that #{verbs.sample}" }
+  end
+end
+
+
+puts RandomHouse.new.recite_randomly
 puts "\n\n"
-puts House.new.recite_with_random_verses
+puts RandomHouse.new.recite_with_random_verses
